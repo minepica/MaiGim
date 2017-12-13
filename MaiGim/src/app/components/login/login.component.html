@@ -1,0 +1,8 @@
+<div *ngIf="a.stato | async; let user; else showLogin">
+  <button (click)='logout()'>Logout</button><br><br><br>
+ 
+</div>
+
+<ng-template #showLogin>
+  <button (click)="login()">Login</button>
+</ng-template>
