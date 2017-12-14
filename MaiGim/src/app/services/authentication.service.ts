@@ -10,8 +10,8 @@ export class AuthenticationService {
 
         public stato = this.auth.authState;
 
-    login_anonimo() {
-      firebase.auth().signInWithEmailAndPassword('luca@luca.it', '123456').catch(function(error) {
+    login_anonimo(user: string, password: string ) {
+      firebase.auth().signInWithEmailAndPassword(user, password).catch(function(error) {
         // Handle Errors here.
         const errorCode = error.code;
         const errorMessage = error.message;

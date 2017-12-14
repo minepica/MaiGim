@@ -1,8 +1,18 @@
 <div *ngIf="a.stato | async; let user; else showLogin">
+  <h1>welcom {{nome}}</h1>
   <button (click)='logout()'>Logout</button><br><br><br>
  
 </div>
 
 <ng-template #showLogin>
+    <label>
+        username:
+        <input (keyup)="onKeyUsername($event)">
+    </label><br>
+    <label>
+        password:
+        <input (keyup)="onKeyPassword($event)">
+    </label><br>
   <button (click)="login()">Login</button>
+  <h1>{{nome}}</h1>
 </ng-template>
