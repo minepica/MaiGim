@@ -1,0 +1,17 @@
+<label>
+    nome:
+    <input (keyup)="onKeyNome($event)">
+</label><br>
+<label>
+    cognome:
+    <input (keyup)="onKeyCognome($event)">
+</label><br>
+<label>
+    nickname:
+    <input (keyup)="onKeyNickname($event)">
+</label><br>
+<label>
+    Email:
+    <input (keyup)="onKeyEmail($event)">
+</label><br>
+<button (click)="upload('utenti')">Login</button>
