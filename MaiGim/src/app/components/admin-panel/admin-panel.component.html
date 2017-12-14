@@ -1,0 +1,38 @@
+<div id='powered'>Powered By CaluCorp</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+            <button mat-raised-button><fa name="plus-circle"></fa>Aggiungi Utente</button>
+        </div>
+
+        <div id='list_cont'>
+            <div id='list'>
+                    <div class = 'utente' *ngFor="let item of items | async">
+                        <b>Cognome:</b> {{item.cognome}} <br>
+                        <b>Nome:</b>  {{item.nome}} <br>
+                        <b>Email:</b>  {{item.email}} <br>
+
+                        <div id='pulsanti'>
+                            <div class="pulsante"><fa name="pencil"></fa>Modifica Anagrafica</div>
+                            <div class="pulsante"><fa name="pencil-square-o"></fa>Modifica Scheda</div>
+                            <div class="pulsante del"><fa name="trash"></fa>Rimuovi Utente</div>
+                        </div>
+                    </div><br>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+</div>
+
+
+
+  
+
+     
+ 
+  

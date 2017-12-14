@@ -8,19 +8,25 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { LoginComponent } from './components/login/login.component';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
+import { AdminPanelModuleModule } from './components/admin-panel/admin-panel-module/admin-panel-module.module';
+import { AngularFireDatabase } from 'angularfire2/database';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
-    BrowserModule
+    BrowserModule,
+    AdminPanelModuleModule
   ],
-  providers: [ AngularFireAuth],
+  providers: [AngularFireAuth, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
