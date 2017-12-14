@@ -11,7 +11,8 @@ import {MatButtonModule,
   MatFormFieldModule,
   MatFormField,
   MatSelectModule,
-  MatOptionModule
+  MatOptionModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
@@ -32,7 +33,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AngularFontAwesomeModule,
     BrowserAnimationsModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatSnackBarModule
   ],
   declarations: [
     AdminPanelComponent,
@@ -49,7 +51,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     AddEsercizioComponent,
     BrowserAnimationsModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatSnackBarModule
   ]
 })
 export class AdminPanelModuleModule { }

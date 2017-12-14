@@ -13,7 +13,7 @@
 
         <div id="campi">
             <mat-form-field>
-                <input matInput placeholder="Nome Esercizio">
+                <input (keyup)="onKeyNome($event)" matInput placeholder="Nome Esercizio">
             </mat-form-field>
 
             <mat-form-field>
@@ -24,8 +24,8 @@
                 </mat-select>
               </mat-form-field>
 
-              {{selected}}
-              <button mat-raised-button ><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
+             
+              <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
               <button mat-raised-button id='back'><fa name="arrow-left"></fa>Torna alla lista utenti</button>
         </div>
 
