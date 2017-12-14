@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AdminPanelModuleModule } from './components/admin-panel/admin-panel-module/admin-panel-module.module';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AdduserComponent } from './components/adduser/adduser.component';
 
 
 
@@ -20,6 +21,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
     AppComponent,
     HeaderComponent,
     LoginComponent,
+    AdduserComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
