@@ -1,28 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
 
-body{
-    background: #0288D1 !important;
-}
-
-
 #top{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#bottoni{
-    display: flex;
-    justify-content: center;
-}
 
 #top img{
     height: 15vw;
 }
 
-.mat-grid-list{
- width: 35vw;
-}
 
 .utente{
     background: #F5F5F5;
@@ -86,4 +74,15 @@ body{
 
 button{
     background: #4CAF50;
+}
+
+#addEs{
+    color: white;
+    margin-top: 1vw;
+    background: #01579B;
+}   
+
+#pulsantiera{
+    display: flex;
+    flex-direction: column;
 }

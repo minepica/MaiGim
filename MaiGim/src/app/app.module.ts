@@ -15,11 +15,12 @@ import { AngularFireDatabase } from 'angularfire2/database';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

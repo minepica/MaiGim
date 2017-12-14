@@ -3,9 +3,21 @@ import { CommonModule } from '@angular/common';
 import { AdminPanelComponent } from '../admin-panel.component';
 
 
-import {MatButtonModule, MatCheckboxModule, MatGridListModule, MatIconModule} from '@angular/material';
+import {MatButtonModule,
+  MatCheckboxModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatFormFieldModule,
+  MatFormField,
+  MatSelectModule,
+  MatOptionModule
+} from '@angular/material';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { AddEsercizioComponent } from '../add-esercizio/add-esercizio.component';
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -15,16 +27,29 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
-    AngularFontAwesomeModule
+    MatInputModule,
+    MatFormFieldModule,
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatOptionModule
   ],
-  declarations: [AdminPanelComponent],
+  declarations: [
+    AdminPanelComponent,
+    AddEsercizioComponent
+  ],
   exports : [
     AdminPanelComponent,
     MatButtonModule,
     MatCheckboxModule,
     MatGridListModule,
     MatIconModule,
-    AngularFontAwesomeModule
+    MatInputModule,
+    AngularFontAwesomeModule,
+    AddEsercizioComponent,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatOptionModule
   ]
 })
 export class AdminPanelModuleModule { }
