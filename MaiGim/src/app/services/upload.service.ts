@@ -8,7 +8,9 @@ export class UploadService {
 
   constructor(private db: AngularFireDatabase) { }
 
-   saveFileData(user: Utente, path: string) {
-    this.db.list(path).set(user.nickname, {user});
+
+
+  saveFileDataSteve(obj: object, path: string) {
+    firebase.database().ref('/' + path ).set(obj);
   }
 }
