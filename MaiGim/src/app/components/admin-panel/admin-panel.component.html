@@ -19,7 +19,10 @@
                         <b>Email:</b>  {{item.email}} <br>
 
                         <div id='pulsanti'>
+                                <a
+                                routerLink="/mod/{{item.nickname}}">
                             <div class="pulsante"><fa name="pencil"></fa>Modifica Anagrafica</div>
+                                </a>
                             <div class="pulsante"><fa name="pencil-square-o"></fa>Modifica Scheda</div>
                             <div class="pulsante del"><fa name="trash"></fa>Rimuovi Utente</div>
                         </div>

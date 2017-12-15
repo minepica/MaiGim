@@ -1,0 +1,43 @@
+<div id='powered'>Powered By CaluCorp</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+            
+            
+        </div>
+        <div id="title">
+            modifica {{nickname}}
+        </div>
+        
+        <div id="campi" >
+            
+            <mat-form-field>
+                <input (keyup)="onKeyNome($event)" [disabled]="false" matInput placeholder="Nome" >
+
+            </mat-form-field>
+       
+            <mat-form-field>
+                <input (keyup)="onKeyCognome($event)" matInput placeholder="cognome">
+            </mat-form-field>
+                   <!--
+            <mat-form-field>
+                <input (keyup)="onKeyNickname($event)" matInput placeholder="Nickname">
+            </mat-form-field>
+               -->
+            <mat-form-field>
+                <input (keyup)="onKeyEmail($event)" matInput placeholder="Email">
+            </mat-form-field>
+
+         
+
+             
+              <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
+              <button mat-raised-button id='back'><fa name="arrow-left"></fa>Torna alla lista utenti</button>
+        </div>
+
+       
+        
+
+    </div>

@@ -11,6 +11,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AdminPanelModuleModule } from './components/admin-panel/admin-panel-module/admin-panel-module.module';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AdduserComponent } from './components/adduser/adduser.component';
+import { ModuserComponent } from './components/moduser/moduser.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -22,11 +24,13 @@ import { AdduserComponent } from './components/adduser/adduser.component';
     HeaderComponent,
     LoginComponent,
     AdduserComponent,
+    ModuserComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
     BrowserModule,
-    AdminPanelModuleModule
+    AdminPanelModuleModule,
+    AppRoutingModule,
   ],
   providers: [AngularFireAuth, AngularFireDatabase],
   bootstrap: [AppComponent]
