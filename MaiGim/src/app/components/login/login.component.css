@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+#top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#top img{
+    height: 15vw;
+}
+
+#test{
+    background: #03A9F4;
+    border: solid #81D4FA 1px;
+    border-radius: 0.5vw;
+    padding: 2vw;
+    font-size: 1vw;
+    font-family: Nunito;
+}
+
+#admin_container{
+    display: flex;
+    justify-content: center;
+}
+
+
+#powered{
+    text-align: center;
+    padding: 1vw;
+    font-family: Nunito;
+}
+
+#title{
+    text-align: center;
+    font-size: 1.2vw;
+}
+
+#campi{
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    margin-top: 3vw;
+    background: #4CAF50;
+    color: white;
+}
+
+#back{
+    background: #00BCD4;
+}

@@ -16,10 +16,25 @@ import { LoadFirebaseService } from '../../services/load-firebase.service';
 })
 export class ModuserComponent implements OnInit {
   items: Observable<any[]>;
-
+  utente: Utente[];
+  i: number;
   // tslint:disable-next-line:max-line-length
   constructor(public lFs: LoadFirebaseService, private route: ActivatedRoute, db: AngularFireDatabase, private us: UploadService, public snackBar: MatSnackBar) {
     this.nickname = this.route.snapshot.paramMap.get('id');
+    this.items = lFs.loadFromFireBase('/utenti');
+    this.items.subscribe(item => {
+      console.log(item);
+      this.utente = item;
+      for (this.i = 0; this.i < this.utente.length; this.i++) {
+        if (this.utente[this.i].nickname === this.nickname) {
+          console.log(this.utente[this.i].nickname);
+          this.nome = this.utente[this.i].nome;
+          this.email = this.utente[this.i].email;
+          this.cognome = this.utente[this.i].cognome;
+
+        }
+      }
+    });
    }
 
   cognome: string;

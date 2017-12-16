@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit {
 
   }
   login() {
-    this.a.login_anonimo(this.usesrname, this.password);
+     this.a.login_anonimo(this.usesrname, this.password);
+
   }
 
   logout() {

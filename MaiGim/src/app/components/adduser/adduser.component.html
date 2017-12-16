@@ -28,12 +28,12 @@
             
         </div>
         <div id="title">
-            Creazione Esercizio
+            Creazione Utente
         </div>
 
         <div id="campi">
             <mat-form-field>
-                <input (keyup)="onKeyNome($event)" matInput placeholder="Nome Esercizio">
+                <input (keyup)="onKeyNome($event)" matInput placeholder="Nome">
             </mat-form-field>
             <mat-form-field>
                 <input (keyup)="onKeyCognome($event)" matInput placeholder="cognome">
@@ -48,8 +48,8 @@
          
 
              
-              <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
-              <button mat-raised-button id='back'><fa name="arrow-left"></fa>Torna alla lista utenti</button>
+              <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Aggiungi utente</button>
+              <button mat-raised-button id='back' routerLink="/adminpanel"><fa name="arrow-left"></fa>Torna alla lista utenti</button>
         </div>
 
        
