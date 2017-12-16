@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../../services/authentication.service';
+import { RouterLink } from '@angular/router/src/directives/router_link';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +14,7 @@ export class LoginComponent implements OnInit {
   usesrname: string;
   password: string;
   nome: string;
-  constructor(public a: AuthenticationService ) { }
+  constructor(public a: AuthenticationService, private router: Router ) { }
 
   ngOnInit() {
   }
@@ -23,14 +25,18 @@ export class LoginComponent implements OnInit {
   }
   onKeyPassword(event: KeyboardEvent) {
     this.password = (<HTMLInputElement>event.target).value;
-
   }
-  login() {
+
+  loginadmin() {
      this.a.login_anonimo(this.usesrname, this.password);
-
   }
-
+  loginUser() {
+    this.a.login_anonimo(this.usesrname, this.password);
+  }
   logout() {
     this.a.logout();
+  }
+  nav() {
+     this.router.navigate(['/ciao']);
   }
 }

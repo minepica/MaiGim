@@ -1,0 +1,65 @@
+<div id='powered'>Powered By CaluCorp</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+            <div id="pulsantiera">
+                    <button mat-raised-button  routerLink="/">Log out</button><br>
+                    
+            </div>
+            
+        </div>
+        <h1 style="text-align:  center;"> Sezione A</h1>
+        <div id='list_cont'>
+                
+            <div id='list'>
+                
+                    <div class = 'utente' *ngFor="let item of itemsA | async, let i = index">
+
+                        <b>nome esercizio:</b> {{item.nome}} <br>
+                        <b>peso utilizzato:</b><input (keyup)="onKeyPeso($event)" matInput placeholder="peso" value="{{item.peso}}"><br> <br>
+
+                        <div id='pulsanti'>
+                             <div class="pulsante" (click)="modA(i)"><fa name="pencil-square-o"></fa>Modifica peso</div>
+                        </div>
+                    </div><br>
+            </div>
+        </div>
+        <h1 style="text-align:  center;"> Sezione B</h1>
+        <div id='list_cont'>
+                
+            <div id='list'>
+                
+                    <div class = 'utente' *ngFor="let item of itemsB | async, let i = index">
+
+                        <b>nome esercizio:</b> {{item.nome}} <br>
+                        <b>peso utilizzato:</b><input (keyup)="onKeyPeso($event)" matInput placeholder="peso" value="{{item.peso}}"><br> <br>
+
+                        <div id='pulsanti'>
+                             <div class="pulsante" (click)="modB(i)"><fa name="pencil-square-o"></fa>Modifica peso</div>
+                        </div>
+                    </div><br>
+            </div>
+        </div>
+        <h1 style="text-align:  center;"> Sezione C</h1>
+        <div id='list_cont'>
+                
+            <div id='list'>
+                
+                    <div class = 'utente' *ngFor="let item of itemsC | async, let i = index">
+
+                        <b>nome esercizio:</b> {{item.nome}} <br>
+                        <b>peso utilizzato:</b><input (keyup)="onKeyPeso($event)" matInput placeholder="peso" value="{{item.peso}}"><br>
+
+                        <div id='pulsanti'>
+                             <div class="pulsante" (click)="modC(i)"><fa name="pencil-square-o" ></fa>Modifica peso</div>
+                        </div>
+                    </div><br>
+            </div>
+        </div>
+    </div>
+    
+
+
+</div>

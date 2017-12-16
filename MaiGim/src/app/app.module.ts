@@ -13,6 +13,9 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { AdduserComponent } from './components/adduser/adduser.component';
 import { ModuserComponent } from './components/moduser/moduser.component';
 import { AppRoutingModule } from './app-routing.module';
+import { UserComponent } from './components/user/user.component';
+
+import { AuthenticationService } from './services/authentication.service';
 
 
 
@@ -25,6 +28,7 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     AdduserComponent,
     ModuserComponent,
+    UserComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

@@ -12,7 +12,7 @@
               <img src="../../../assets/logo.png" alt=""> 
               <div id="pulsantiera">
                     <button mat-raised-button id='back'  routerLink="/adminpanel"> lista utenti</button><br>
-                    <button mat-raised-button (click)='logout()' routerLink="/">Log out</button><br>
+                    <button mat-raised-button  (click)='logout()' >Log out</button><br>
               </div>
               
           </div>
@@ -57,8 +57,8 @@
             <mat-form-field>
                 <input (keyup)="onKeyPassword($event)" matInput placeholder="Password" >
             </mat-form-field>
-              <button mat-raised-button (click)='login()' ><fa name="plus-circle"></fa>Login</button>
-              
+              <button mat-raised-button (click)='loginadmin()' ><fa name="plus-circle"></fa>Login admin</button>
+              <button mat-raised-button  (click)='nav()' >navigate</button><br>
         </div>
 
        
