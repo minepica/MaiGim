@@ -30,13 +30,8 @@ export class LoginComponent implements OnInit {
   loginadmin() {
      this.a.login_anonimo(this.usesrname, this.password);
   }
-  loginUser() {
-    this.a.login_anonimo(this.usesrname, this.password);
-  }
   logout() {
     this.a.logout();
   }
-  nav() {
-     this.router.navigate(['/ciao']);
-  }
+
 }

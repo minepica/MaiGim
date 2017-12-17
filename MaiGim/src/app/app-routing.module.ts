@@ -11,8 +11,8 @@ import { UserComponent } from './components/user/user.component';
 
 
 const routes: Routes = [
-  {path: 'adminpanel',
-  loadChildren: './components/admin-panel/admin-panel-module/admin-panel-module#AdminPanelModuleModule'},
+ // {path: 'adminpanel',
+ // loadChildren: './components/admin-panel/admin-panel-module/admin-panel-module#AdminPanelModuleModule'},
   { path: 'mod/:id', component: ModuserComponent },
   { path: 'ciao', component: UserComponent },
   { path: 'adduser', component: AdduserComponent },
