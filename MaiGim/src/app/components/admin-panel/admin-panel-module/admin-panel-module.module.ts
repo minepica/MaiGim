@@ -19,11 +19,16 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AddEsercizioComponent } from '../add-esercizio/add-esercizio.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { Routes, RouterModule } from '@angular/router';
 
+const routes: Routes = [
+  { path: 'adminpanel', component: AdminPanelComponent }
+];
 
 @NgModule({
   imports: [
     CommonModule,
+
     MatButtonModule,
     MatCheckboxModule,
     MatGridListModule,
@@ -34,7 +39,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatSelectModule,
     MatOptionModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule.forChild(routes)
   ],
   declarations: [
     AdminPanelComponent,

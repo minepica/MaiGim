@@ -1,10 +1,30 @@
 <div *ngIf="a.stato | async; let user; else showLogin">
-  <h1>welcom {{nome}}</h1>
+ <!--
+    <h1>welcom {{nome}}</h1><br>
+  <button mat-raised-button id='back'  routerLink="/adminpanel"><fa name="arrow-left"></fa> lista utenti</button>
   <button (click)='logout()'>Logout</button><br><br><br>
- 
+  <div id='powered'>Powered By CaluCorp</div>
+  <div id='admin_container'>
+  -->
+  <div id='powered'>Powered By Luca</div>
+  <div id='admin_container'>
+      <div id='test'>
+          <div id='top'>
+              <img src="../../../assets/logo.png" alt=""> 
+              <div id="pulsantiera">
+                    <button mat-raised-button id='back'  routerLink="/adminpanel"> lista utenti</button><br>
+                    <button mat-raised-button  (click)='logout()' >Log out</button><br>
+              </div>
+              
+          </div>
+         
+          
+      </div>
+  </div>
 </div>
 
 <ng-template #showLogin>
+    <!--
     <label>
         username:
         <input (keyup)="onKeyUsername($event)">
@@ -15,4 +35,37 @@
     </label><br>
   <button (click)="login()">Login</button>
   <h1>{{nome}}</h1>
+-->
+<div id='powered'>Powered By Luca</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+            
+            
+        </div>
+        <div id="title">
+            Login
+        </div>
+        
+        <div id="campi" >
+            
+            <mat-form-field>
+                <input (keyup)="onKeyUsername($event)"  matInput placeholder="Username"  >
+             </mat-form-field>
+       
+            <mat-form-field>
+                <input (keyup)="onKeyPassword($event)" matInput placeholder="Password" >
+            </mat-form-field>
+              <button mat-raised-button (click)='loginadmin()' ><fa name="plus-circle"></fa>Login admin</button>
+             
+        </div>
+
+       
+        
+
+    </div>
+</div>
 </ng-template>
+

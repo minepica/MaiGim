@@ -1,0 +1,43 @@
+<div id='powered'>Powered By Luca</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+            
+            
+        </div>
+        <div id="title">
+            modifica {{nickname}}
+        </div>
+        
+        <div id="campi" >
+            
+            <mat-form-field>
+                <input (keyup)="onKeyNome($event)" [disabled]="false" matInput placeholder="nome" value="{{nome}}" >
+
+            </mat-form-field>
+       
+            <mat-form-field>
+                <input (keyup)="onKeyCognome($event)" matInput placeholder="cognome" value="{{cognome}}">
+            </mat-form-field>
+                   <!--
+            <mat-form-field>
+                <input (keyup)="onKeyNickname($event)" matInput placeholder="Nickname">
+            </mat-form-field>
+               -->
+            <mat-form-field>
+                <input (keyup)="onKeyEmail($event)" matInput placeholder="email" value="{{email}}">
+            </mat-form-field>
+
+         
+
+             
+              <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Modifica utente</button>
+              <button mat-raised-button id='back'  routerLink="/adminpanel"><fa name="arrow-left"></fa>Torna alla lista utenti</button>
+        </div>
+
+       
+        
+
+    </div>

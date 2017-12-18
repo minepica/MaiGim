@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+#top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#top img{
+    height: 15vw;
+}
+
+
+.utente{
+    background: #F5F5F5;
+    margin-top: 1vw;
+    border: solid 1px #9E9E9E;
+    padding: 1vw;
+    border-radius: 0.5vw;
+
+    font-family: Nunito;
+}
+
+#list{
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: center;
+    width: 35vw;
+}
+
+#list_cont{
+    display: flex;
+    justify-content: center;
+}
+
+#test{
+    background: #03A9F4;
+    border: solid #81D4FA 1px;
+    border-radius: 0.5vw;
+    padding: 2vw;
+    font-size: 1vw;
+}
+
+#admin_container{
+    display: flex;
+    justify-content: center;
+}
+
+#pulsanti{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2vw;
+}
+
+.pulsante{
+    padding-left: 0.4vw;
+    padding-right: 0.4vw;
+    border: solid black 1px;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.del{
+    background: #F44336 !important;
+    color: white;
+}
+
+#powered{
+    text-align: center;
+    padding: 1vw;
+    font-family: Nunito;
+}
+
+button{
+    background: #4CAF50;
+}
+
+#addEs{
+    color: white;
+    margin-top: 1vw;
+    background: #01579B;
+}   
+
+#pulsantiera{
+    display: flex;
+    flex-direction: column;
+}

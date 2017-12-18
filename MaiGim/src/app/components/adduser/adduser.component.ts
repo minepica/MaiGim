@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UploadService } from '../../services/upload.service';
 import { Utente } from '../../classi/utente';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-adduser',
@@ -10,7 +11,7 @@ import { Utente } from '../../classi/utente';
 })
 export class AdduserComponent implements OnInit {
 
-  constructor(private up: UploadService) { }
+  constructor(private us: UploadService, public snackBar: MatSnackBar) { }
   cognome: string;
   email: string;
   nickname: string;
@@ -30,13 +31,28 @@ export class AdduserComponent implements OnInit {
     this.nickname = (<HTMLInputElement>event.target).value;
   }
 
-  upload(path: string) {
+  validation() {
+    if (this.nome && this.cognome && this.email && this.nickname ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  tasto() {
     console.log('sono nel upload');
     this.currentupload = new Utente(this.nome, this.cognome, this.email, this.nickname);
-    console.log(this.currentupload);
-    this.up.saveFileData(this.currentupload, path);
+
+
+    this.us.saveFileDataSteve(this.currentupload, 'utenti/' + this.currentupload.nickname);
+
+    this.openSnackBar('Utente Aggiunto!');
   }
 
+  openSnackBar(message: string) {
+    this.snackBar.open(message, 'Ok', {
+      duration: 5000,
+    });
+  }
 
 
   ngOnInit() {
