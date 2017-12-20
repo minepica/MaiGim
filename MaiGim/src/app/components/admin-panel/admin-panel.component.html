@@ -1,4 +1,4 @@
-<div id='powered'>Powered By Luca</div>
+<div id='powered'>Powered By Carmine</div>
 <div id='admin_container'>
 
     <div id='test'>
@@ -8,7 +8,7 @@
                     <button mat-raised-button  routerLink="/">home</button><br>
                     <button mat-raised-button  routerLink="/user">Scheda</button><br>
                     <button mat-raised-button routerLink="/adduser"><fa name="plus-circle"></fa>Aggiungi Utente</button><br>
-                    <button mat-raised-button id='addEs'><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
+                    <button mat-raised-button routerLink="/addEx" id='addEs'><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
             </div>
             
         </div>
@@ -20,13 +20,11 @@
                         <b>Nome:</b>  {{item.nome}} <br>
                         <b>Email:</b>  {{item.email}} <br>
 
-                        <div id='pulsanti'>
-                                
+                        <div id='pulsanti'>    
                                 
                             <div class="pulsante" routerLink="/mod/{{item.nickname}}"><fa name="pencil"></fa>Modifica Anagrafica</div>
-                                
-                            <div class="pulsante"><fa name="pencil-square-o"></fa>Modifica Scheda</div>
-                            <div class="pulsante del"><fa name="trash"></fa>Rimuovi Utente</div>
+                            <div class="pulsante" routerLink="/modScheda/{{item.nickname}}"><fa name="pencil-square-o"></fa>Modifica Scheda</div>
+                            <div class="pulsante del" (click)='deleteUser(item.nickname)'><fa name="trash"></fa>Rimuovi Utente</div>
                         </div>
                     </div><br>
             </div>

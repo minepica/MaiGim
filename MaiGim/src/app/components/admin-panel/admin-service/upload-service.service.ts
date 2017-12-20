@@ -9,4 +9,8 @@ export class UploadServiceService {
   saveFileData(obj: object, path: string, name: string) {
     firebase.database().ref('/' + path + '/' + name).set(obj);
   }
+
+  removeFileData(path: string) {
+    firebase.database().ref(path).remove();
+  }
 }

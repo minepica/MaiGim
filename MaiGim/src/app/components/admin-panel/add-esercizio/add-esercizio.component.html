@@ -1,4 +1,4 @@
-<div id='powered'>Powered By CaluCorp</div>
+<div id='powered'>Powered By Carmine</div>
 <div id='admin_container'>
 
     <div id='test'>
@@ -22,11 +22,11 @@
                         {{ categoria }}
                     </mat-option>
                 </mat-select>
-              </mat-form-field>
+            </mat-form-field>
 
              
               <button mat-raised-button (click)='tasto()' [disabled]="!validation()"><fa name="plus-circle"></fa>Aggiungi Esercizio</button>
-              <button mat-raised-button id='back'><fa name="arrow-left"></fa>Torna alla lista utenti</button>
+              <button mat-raised-button routerLink="/adminpanel" id='back'><fa name="arrow-left"></fa>Torna alla lista utenti</button>
         </div>
 
        

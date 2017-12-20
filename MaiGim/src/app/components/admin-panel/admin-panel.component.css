@@ -64,6 +64,7 @@
 .del{
     background: #F44336 !important;
     color: white;
+    position: relative;
 }
 
 #powered{

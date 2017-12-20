@@ -1,0 +1,97 @@
+
+<div id='powered'>Powered By Carmine</div>
+<div id='admin_container'>
+
+    <div id='test'>
+        <div id='top'>
+            <img src="../../../assets/logo.png" alt=""> 
+          
+            
+        </div>
+
+        <div id="welcome">Scheda di {{nickname}}</div>
+        <div class="title_section">Sezione A</div>
+        <div class="section">
+            <div class="esercizio" *ngFor='let sA of sezioneA | async'>
+              {{sA.nome}}
+              <fa (click) = 'delEx(sA.nome, "A")' class="del" name="minus-circle"></fa>
+            </div>
+            <div class="butt_section">
+              <button mat-raised-button class="addEx" (click)='showAdd("A")'><fa name="plus-circle"></fa>Add Excercise</button>
+            </div>
+        </div><br>
+
+        <div class="title_section">Sezione B</div>
+        <div class="section">
+            <div class="esercizio" *ngFor='let sB of sezioneB | async'>
+                {{sB.nome}}
+                <fa (click) = 'delEx(sB.nome, "B")' class="del" name="minus-circle"></fa>
+            </div>
+            <div class="butt_section">
+              <button mat-raised-button class="addEx" (click)='showAdd("B")'><fa name="plus-circle"></fa>Add Excercise</button>
+            </div>
+        </div><br>
+
+        <div class="title_section">Sezione C</div>
+        <div class="section">
+            <div class="esercizio" *ngFor='let sC of sezioneC | async'>
+                {{sC.nome}}
+                <fa (click) = 'delEx(sC.nome, "C")' class="del" name="minus-circle"></fa>
+            </div>
+            <div class="butt_section">
+              <button mat-raised-button class="addEx" (click)='showAdd("C")'><fa name="plus-circle"></fa>Add Excercise</button>
+            </div>
+        </div><br>
+
+        <button mat-raised-button routerLink="/adminpanel" id='back'><fa name="arrow-left"></fa>Torna alla pagina precedente</button>
+       
+
+    </div>
+
+
+
+    <div id='test' *ngIf='showing'>
+
+        <div id="welcome">Add Esercizi alla Sezione {{selectedSchede}}</div><br><br>
+        <div class="title_section">Bicipiti</div>
+       
+                <div class="esercizio" *ngFor="let b of bicipiti | async">
+                    {{b.nome}}
+                    <div class="add" (click)='addEx(b.nome)'><fa name="plus-circle"></fa></div>
+                </div>
+        
+
+       <br><div class="title_section">Gambe</div>
+                <div class="esercizio" *ngFor="let g of gambe | async">
+                    {{g.nome}} 
+                    <div class="add" (click)='addEx(g.nome)'><fa name="plus-circle"></fa></div>
+                </div>
+
+       <br><div class="title_section">Petto</div>
+        <div class="esercizio" *ngFor="let p of petto | async">
+            {{p.nome}} 
+            <div class="add" (click)='addEx(p.nome)'><fa name="plus-circle"></fa></div>
+        </div>
+        
+
+       <br><div class="title_section">Spalle</div>
+        <div class="esercizio" *ngFor="let s of spalle | async">
+            {{s.nome}}
+            <div class="add" (click)='addEx(s.nome)'><fa name="plus-circle"></fa></div>
+        </div>
+
+       <br><div class="title_section">Tricipiti</div>
+        <div class="esercizio" *ngFor="let t of tricipiti | async">
+            {{t.nome}}
+            <div class="add" (click)='addEx(t.nome)'><fa name="plus-circle"></fa></div>
+        </div>
+
+       <br>
+        <button mat-raised-button class="annulla" (click)='hideAdd()'>Chiudi</button>
+        
+
+    </div>
+    
+
+
+</div>

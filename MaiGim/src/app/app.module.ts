@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './components/user/user.component';
 
 import { AuthenticationService } from './services/authentication.service';
+import { ShowSchedaComponent } from './components/admin-panel/show-scheda/show-scheda.component';
+import { ModSchedaComponent } from './components/admin-panel/mod-scheda/mod-scheda.component';
 
 
 
@@ -29,6 +31,8 @@ import { AuthenticationService } from './services/authentication.service';
     AdduserComponent,
     ModuserComponent,
     UserComponent,
+    ShowSchedaComponent,
+    ModSchedaComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
