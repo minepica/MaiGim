@@ -19,6 +19,12 @@ import { AuthenticationService } from './services/authentication.service';
 import { ShowSchedaComponent } from './components/admin-panel/show-scheda/show-scheda.component';
 import { ModSchedaComponent } from './components/admin-panel/mod-scheda/mod-scheda.component';
 
+import { AuthGuard } from './core/auth.guard';
+import { AuthService } from './core/auth.service';
+import { LoadFirebaseService } from './services/load-firebase.service';
+
+
+
 
 
 
@@ -40,7 +46,13 @@ import { ModSchedaComponent } from './components/admin-panel/mod-scheda/mod-sche
     AdminPanelModuleModule,
     AppRoutingModule,
   ],
-  providers: [AngularFireAuth, AngularFireDatabase],
+  providers: [
+    AngularFireAuth,
+    AngularFireDatabase,
+    AuthService,
+    AuthGuard,
+    LoadFirebaseService
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

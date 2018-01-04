@@ -4,6 +4,8 @@ import { Observable } from 'rxjs/Observable';
 import { Utente } from './class/utente';
 import { UploadServiceService } from './admin-service/upload-service.service';
 
+import {AuthService} from '../../core/auth.service';
+
 
 import {MatSnackBar} from '@angular/material';
 
@@ -21,11 +23,13 @@ export class AdminPanelComponent implements OnInit {
   items: Observable<any[]>;
   utente: Utente[];
 
-  constructor(public lFs: LoadFirebaseService, public uPs: UploadServiceService, public snackBar: MatSnackBar) {
+  constructor(public lFs: LoadFirebaseService, public uPs: UploadServiceService, public snackBar: MatSnackBar, private auth: AuthService) {
     this.items = lFs.loadFromFireBase('/utenti');
     this.items.subscribe(item => {
       this.utente = item;
     });
+
+    console.log(this.auth.authenticated);
    }
 
   deleteUser(nickname: string) {

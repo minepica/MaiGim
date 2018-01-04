@@ -10,7 +10,7 @@ export class AuthenticationService {
 
         public stato = this.auth.authState;
 
-    login_anonimo(user: string, password: string ) {
+    login(user: string, password: string ) {
       firebase.auth().signInWithEmailAndPassword(user, password).catch(function(error) {
         // Handle Errors here.
         const errorCode = error.code;
@@ -18,12 +18,29 @@ export class AuthenticationService {
         // ...
       });
       this.stato = this.auth.authState;
+
+      firebase.auth().onAuthStateChanged(function( user ) {
+        if (user) {
+          alert(user.displayName);
+        }else {
+          alert('mammt');
+         }
+      });
+
+
+    }
+
+    showEmail() {
+      const usercur = firebase.auth().currentUser;
+      alert(usercur.email);
     }
 
     logout() {
       this.auth.auth.signOut();
       this.stato = this.auth.authState;
     }
+
+
 
 
 }

@@ -21,8 +21,10 @@ import { AddEsercizioComponent } from '../add-esercizio/add-esercizio.component'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from '../../../core/auth.guard';
+
 const routes: Routes = [
-  { path: 'adminpanel', component: AdminPanelComponent }
+  { path: 'adminpanel', component: AdminPanelComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

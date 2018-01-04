@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginadmin() {
-     this.a.login_anonimo(this.usesrname, this.password);
+     this.a.login(this.usesrname, this.password);
   }
   logout() {
     this.a.logout();
