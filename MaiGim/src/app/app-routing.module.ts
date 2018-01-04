@@ -13,18 +13,13 @@ import { AddEsercizioComponent } from './components/admin-panel/add-esercizio/ad
 
 
 const routes: Routes = [
- // {path: 'adminpanel',
- // loadChildren: './components/admin-panel/admin-panel-module/admin-panel-module#AdminPanelModuleModule'},
+
   { path: 'mod/:id', component: ModuserComponent },
   { path: 'modScheda/:id', component: ModSchedaComponent },
-  { path: 'ciao', component: UserComponent },
   { path: 'adduser', component: AdduserComponent },
   { path: 'addEx', component: AddEsercizioComponent },
   { path: 'user', component: UserComponent },
-  { path: '', component: LoginComponent },
-
-  // { path: 'classiche/:id', component: ClassichedetailComponent }
-
+  { path: '', component: LoginComponent }
 
 ];
 
