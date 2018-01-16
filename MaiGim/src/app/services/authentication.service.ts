@@ -19,21 +19,12 @@ export class AuthenticationService {
       });
       this.stato = this.auth.authState;
 
-      firebase.auth().onAuthStateChanged(function( user ) {
-        if (user) {
-          alert(user.displayName);
-        }else {
-          alert('mammt');
-         }
-      });
+
 
 
     }
 
-    showEmail() {
-      const usercur = firebase.auth().currentUser;
-      alert(usercur.email);
-    }
+   
 
     logout() {
       this.auth.auth.signOut();
