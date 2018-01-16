@@ -27,7 +27,9 @@ export class AddEsercizioComponent implements OnInit {
   }
 
   onKeyNome(event: KeyboardEvent) {
-    this.nome = (<HTMLInputElement>event.target).value;
+    if ((<HTMLInputElement>event.target).value.charAt(0) !== ' ') {
+      this.nome = (<HTMLInputElement>event.target).value;
+    }
   }
 
   validation() {

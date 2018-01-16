@@ -15,7 +15,6 @@ export class AuthGuard implements CanActivate {
   nickname: string;
 
   constructor(private auth: AuthService, private router: Router, private lfs: LoadFirebaseService) {
-    
   }
 
   canActivate(
@@ -34,15 +33,13 @@ export class AuthGuard implements CanActivate {
       for ( this.i = 0; this.i < this.utente.length; this.i ++) {
         if (this.utente[this.i].email === this.auth.isAdmin) {
           console.log(this.utente[this.i].nickname);
-          this.router.navigate(['/modScheda/' + this.utente[this.i].nickname]);
+          this.router.navigate(['/showScheda/' + this.utente[this.i].nickname]);
         }
       }
     });
-
-           
           }
       },
-      2000);
+      200);
 
     return true;
   }

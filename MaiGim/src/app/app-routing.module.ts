@@ -8,6 +8,8 @@ import { LoginComponent } from './components/login/login.component';
 import { UserComponent } from './components/user/user.component';
 import { ModSchedaComponent } from './components/admin-panel/mod-scheda/mod-scheda.component';
 import { AddEsercizioComponent } from './components/admin-panel/add-esercizio/add-esercizio.component';
+import { ShowSchedaComponent } from './components/admin-panel/show-scheda/show-scheda.component';
+import { AuthGuard } from './core/auth.guard';
 
 
 
@@ -15,7 +17,8 @@ import { AddEsercizioComponent } from './components/admin-panel/add-esercizio/ad
 const routes: Routes = [
 
   { path: 'mod/:id', component: ModuserComponent },
-  { path: 'modScheda/:id', component: ModSchedaComponent },
+  { path: 'modScheda/:id', component: ModSchedaComponent},
+  { path: 'showScheda/:id', component: ShowSchedaComponent },
   { path: 'adduser', component: AdduserComponent },
   { path: 'addEx', component: AddEsercizioComponent },
   { path: 'user', component: UserComponent },

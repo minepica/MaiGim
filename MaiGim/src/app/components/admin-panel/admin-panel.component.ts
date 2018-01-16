@@ -34,6 +34,7 @@ export class AdminPanelComponent implements OnInit {
 
   deleteUser(nickname: string) {
     this.uPs.removeFileData('/utenti/' + nickname);
+    this.uPs.removeFileData('/schede/' + nickname);
 
     this.openSnackBar('Utente eliminato con successo');
   }
